@@ -1,251 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Stelograph | Diseño Gráfico &amp; Branding en Montevideo</title>
-    <meta content="Diseño de marca, logotipos, packaging y piezas publicitarias. Propuestas profesionales y resultados medibles. Solicita tu presupuesto." name="description"/>
-    <meta content="" name="keywords"/>
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon"/>
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet"/>
-    <!-- WhatsApp Button Styles -->
-    <style>
-        /* WhatsApp Button Styles */
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 12px 24px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .whatsapp-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: all 0.6s;
-            z-index: -1;
-        }
-        
-        .whatsapp-btn:hover::before {
-            left: 100%;
-        }
-        
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            color: white;
-        }
-        
-        .whatsapp-btn:active {
-            transform: translateY(-1px);
-        }
-        
-        .whatsapp-btn i {
-            font-size: 1.2rem;
-        }
-        
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-            color: white;
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-        
-        /* WhatsApp Button with Icon Only */
-        .whatsapp-icon-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-        
-        .whatsapp-icon-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-            color: white;
-        }
-        
-        /* WhatsApp Button with Badge */
-        .whatsapp-badge-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: #25D366;
-            border: 2px solid #25D366;
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .whatsapp-badge-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            transition: all 0.3s ease;
-            border-radius: 50px;
-            z-index: -1;
-        }
-        
-        .whatsapp-badge-btn:hover::before {
-            width: 100%;
-        }
-        
-        .whatsapp-badge-btn:hover {
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-        }
-        
-        .whatsapp-badge-btn i {
-            font-size: 1.2rem;
-        }
-        
-        /* WhatsApp Button in Hero Section */
-        .hero-whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            padding: 14px 28px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-        
-        .hero-whatsapp-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            color: white;
-        }
-        
-        .hero-whatsapp-btn i {
-            font-size: 1.2rem;
-        }
-    </style>
-    <!-- =======================================================
-      * Template Name: Strategy
-      * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
-      * Updated: Jun 06 2025 with Bootstrap v5.3.6
-      * Author: BootstrapMade.com
-      * License: https://bootstrapmade.com/license/
-      ======================================================== -->
-    <link href="https://stelograph.com/" rel="canonical"/>
-    <meta content="website" property="og:type"/>
-    <meta content="Stelograph | Diseño Gráfico &amp; Branding" property="og:title"/>
-    <meta content="Logotipos, identidad, packaging y más." property="og:description"/>
-    <meta content="https://stelograph.com/" property="og:url"/>
-    <meta content="https://stelograph.com/assets/img/og-cover.jpg" property="og:image"/>
-    <meta content="summary_large_image" name="twitter:card"/>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Stelograph",
-      "url": "https://stelograph.com",
-      "logo": "https://stelograph.com/assets/img/logo.png",
-      "sameAs": [
-        "https://www.instagram.com/tuusuario",
-        "https://www.behance.net/tuusuario"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Montevideo",
-        "addressCountry": "UY"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "telephone": "+59800000000",
-          "areaServed": "UY"
-        }
-      ]
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título SEO -->
+  <title>Stelograph | Diseño Gráfico &amp; Branding</title>
+
+  <!-- Descripción SEO -->
+  <meta name="description" content="Diseño de marca, logotipos, packaging y piezas publicitarias. Propuestas profesionales y resultados medibles. Solicita tu presupuesto." />
+
+  <!-- Meta útiles -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Stelograph" />
+  <!-- keywords está obsoleto, mejor no usarlo -->
+  <!-- <meta name="keywords" content=""> -->
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://stelograph.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
+  />
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" />
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Stelograph" />
+  <meta property="og:locale" content="es-VE" />
+  <meta property="og:title" content="Stelograph | Diseño Gráfico &amp; Branding" />
+  <meta property="og:description" content="Diseño de marca, logotipos, packaging y piezas publicitarias. Propuestas profesionales y resultados medibles. Solicita tu presupuesto." />
+  <meta property="og:url" content="https://stelograph.com/" />
+  <meta property="og:image" content="https://stelograph.com/assets/img/og-cover.jpg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stelograph | Diseño Gráfico &amp; Branding" />
+  <meta name="twitter:description" content="Diseño de marca, logotipos, packaging y piezas publicitarias. Propuestas profesionales y resultados medibles. Solicita tu presupuesto." />
+  <meta name="twitter:image" content="https://stelograph.com/assets/img/og-cover.jpg" />
+
+  <!-- Datos estructurados: servicio profesional -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Stelograph",
+    "url": "https://stelograph.com",
+    "logo": "https://stelograph.com/assets/img/logo.png",
+    "description": "Estudio de diseño gráfico y branding. Logotipos, identidad visual, packaging y piezas publicitarias.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mérida",
+      "addressRegion": "Mérida",
+      "addressCountry": "VE"
+    },
+    "telephone": "+58 4247534219"
+  }
+  </script>
+
+  <!-- (Opcional) Datos estructurados del sitio web -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Stelograph",
+    "url": "https://stelograph.com"
+  }
+  </script>
+
+  <!-- WhatsApp Button Styles (tal como los tenías) -->
+  <style>
+    /* WhatsApp Button Styles */
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
     }
-    </script>
+
+    .whatsapp-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.6s;
+      z-index: -1;
+    }
+
+    .whatsapp-btn:hover::before {
+      left: 100%;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      color: white;
+    }
+
+    .whatsapp-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+      color: white;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* WhatsApp Button with Icon Only */
+    .whatsapp-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-icon-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+      color: white;
+    }
+
+    /* WhatsApp Button with Badge */
+    .whatsapp-badge-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: #25D366;
+      border: 2px solid #25D366;
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .whatsapp-badge-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      z-index: -1;
+    }
+
+    .whatsapp-badge-btn:hover::before {
+      width: 100%;
+    }
+
+    .whatsapp-badge-btn:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-badge-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* WhatsApp Button in Hero Section */
+    .hero-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .hero-whatsapp-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+
+    .hero-whatsapp-btn i {
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <!-- =======================================================
+    * Template Name: Strategy
+    * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
+    * Updated: Jun 06 2025 with Bootstrap v5.3.6
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
+
 <body class="index-page">
     <header class="header d-flex align-items-center fixed-top" id="header">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
